@@ -124,6 +124,7 @@ body {
 <p><a href="product.php">Products</a></p>
 <p><a href="ind.php">Customer</a></p>
 <p><a href="register.php">Register</a></p>
+<p><a href="salesinvoice.php">Sales Order</a></p>
 </div>
 
 
