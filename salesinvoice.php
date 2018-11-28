@@ -267,7 +267,7 @@ $con = new PDO("mysql:host={$host};dbname={$db_name}", $username, $password);
 
                 $.ajax({  
 
-                url:"insertsales.php",  
+                url:"invoiceinsert.php",  
 
                 method:"POST",  
 
