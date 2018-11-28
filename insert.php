@@ -11,7 +11,7 @@ $area= "";
 $gc= "";
 
 //create connection
-$con= mysqli_connect('localhost', 'root' , "" , 'mysql');
+$con= mysqli_connect('localhost', 'root' , 'Abcd#1234' , 'mysql');
 if (isset($_POST['submit'])){
 
 $cid= $_POST['cid'];
