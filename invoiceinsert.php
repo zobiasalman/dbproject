@@ -1,6 +1,6 @@
 <?php  
 
- $connect = mysqli_connect("localhost", "root", "", "mysql"); 
+ $connect = mysqli_connect("localhost", "root", "Abcd#1234", "mysql"); 
 
 $ORDERNO=isset($_POST["ORDERNO"])?$_POST["ORDERNO"]:"";
 
