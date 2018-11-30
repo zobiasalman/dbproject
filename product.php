@@ -85,7 +85,22 @@ th {
 	
 	}
 
-</style>
+</style
+	
+	<div class="nav">
+
+  <a href='register.php'><b>Register</b></a>
+  
+  <a href='login.php'><b>Logut</b></a>
+
+  <a href='ind.php'><b>Customer</b></a>
+
+  <a href='sales.php'><b>Sales Person</b></a>
+
+  <a class="active" href='salesinvoice.php'><b>Sales Order</b></a>
+
+
+</div>
 
 <head>
 
