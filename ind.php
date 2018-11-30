@@ -92,7 +92,7 @@ th {
   
   <a href='login.php'><b>Logut</b></a>
 
-  <a href='ind.php'><b>Customer</b></a>
+  <a href='sales.php'><b>Sales Person</b></a>
 
   <a href='product.php'><b>Product</b></a>
 
