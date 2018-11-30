@@ -1,11 +1,15 @@
 
 <?php  
 
- $connect = mysqli_connect("localhost", "root", "Abcd#1234", "mysql");  
+ $connect = mysqli_connect("localhost", "root", "", "mysql");  
 
  $output = '';  
 
 $CID=isset($_POST["CID"])?$_POST["CID"]:"";
+$RATE=isset($_POST["SalesPrice"])?$_POST["SalesPrice"]:"";
+$QUANTITY=isset($_POST["QUANTITY"])?$_POST["QUANTITY"]:"";
+$AMOUNT = isset($_POST['QUANTITY*RATE'])?$_POST["QUANTITY*RATE"]:"";
+//$ProductCode=isset($_POST[""])?$_POST["SalesPrice"]:"";
 
  $sql = "SELECT * FROM salesorder_13122 WHERE CID='$CID' ORDER BY ORDERNO";  
 
@@ -14,6 +18,8 @@ $CID=isset($_POST["CID"])?$_POST["CID"]:"";
  $sql2 = "SELECT SID FROM salespersons_13122";
 
  $sql3 = "SELECT ProductCode FROM product_13122";
+ 
+ 
 
  $result = mysqli_query($connect, $sql);  
 
@@ -27,7 +33,7 @@ $CID=isset($_POST["CID"])?$_POST["CID"]:"";
 
 <table border="1" align="center" table width="1200">
 
-<tr style="background-color:DodgerBlue; padding: 20px;"> <th>ID</th> <th>ShopName</th> <th>CustomerName</th> <th>ContactNo</th> <th>Address</th> <th>Area</th> <th>GeographicalCoordinates</th></tr>
+<tr style="background-color:DodgerBlue; padding: 20px;"> <th>CID</th> <th>SalesPersonName</th> <th>CustomerName</th> <th>ContactNo</th> <th>Address</th> <th>Area</th> <th>GeographicalCoordinates</th></tr>
 
 	 
 
@@ -50,6 +56,7 @@ $CID=isset($_POST["CID"])?$_POST["CID"]:"";
 	</tr>
 
 	</table>
+	
 
 <h3>SALE ORDER INVOICE</h3>
 
@@ -166,6 +173,7 @@ $output .= '<option value="'.$row2["ProductCode"].'"'.($row["ProductCode"]==$row
 
                 <td>';
 
+
 		$output .= '<select id="SID" class="form-control">';
 
 		$output .= '<option value="">None</option>';
@@ -202,9 +210,9 @@ $output .= '<option value="'.$row2["ProductCode"].'"'.($row["ProductCode"]==$row
 
                 <td id="QUANTITY" contenteditable></td>  
 
-                <td> - </td>  
-
-                <td> - </td>  
+                <td id="RATE" contenteditable></td> 
+				
+				<td id="AMOUNT"contenteditable></td>  ;
 
                 <td><button type="button" name="btn_add" id="btn_add" class="btn btn-xs btn-success">CREATE</button></td>  
 
@@ -266,9 +274,9 @@ $output .= '
 
                 <td id="QUANTITY" contenteditable></td>  
 
-                <td> - </td>  
-
-                <td> - </td>  
+              <td id="RATE" contenteditable></td>   
+			  
+				<td id="AMOUNT"contenteditable></td> ;
 
                 <td><button type="button" name="btn_add" id="btn_add" class="btn btn-xs btn-success">CREATE</button></td>  
 

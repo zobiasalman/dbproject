@@ -1,6 +1,6 @@
 <?php
 
- $connect = mysqli_connect("localhost", "root", "Abcd#1234", "mysql"); 
+ $connect = mysqli_connect("localhost", "root", "", "mysql"); 
 
 $id=isset($_POST["id"])?$_POST["id"]:"";
 

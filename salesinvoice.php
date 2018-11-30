@@ -97,22 +97,12 @@ th {
 
   <a href='ind.php'><b>Customer</b></a>
 
-  <a  href='sales.php'><b>SalesPerson</b></a></a>
+  <a href='sales.php'><b>SalesPerson</b></a></a>
 
 
   <a href='product.php'><b>Product</b></a>
 
   <a class="active" href='salesinvoice.php'><b>Sales Order</b></a>
-
-
-
-
- 
-
-
-
-
-
 
 
 </div>
@@ -156,6 +146,8 @@ $con = new PDO("mysql:host={$host};dbname={$db_name}", $username, $password);
 	}
 
     	echo "</select>";
+		
+		
 
 	?>
 
@@ -227,7 +219,7 @@ $con = new PDO("mysql:host={$host};dbname={$db_name}", $username, $password);
 
            var QUANTITY1 = $('#QUANTITY').text();  
 
-           var RATE1 = $('#ATE').text(); 
+           var RATE1 = $('#RATE').text(); 
 
 	var QUANTITY= parseInt(QUANTITY1);
 
@@ -264,6 +256,7 @@ $con = new PDO("mysql:host={$host};dbname={$db_name}", $username, $password);
                 return false;  
 
            }    
+
 
                 $.ajax({  
 
